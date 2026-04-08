@@ -1,0 +1,155 @@
+fever,cough,fatigue,headache,age,disease,severity
+1,1,0,0,25,Common Cold,2
+1,1,1,0,28,Common Cold,2
+1,0,1,1,30,Common Cold,2
+0,1,0,0,22,Common Cold,1
+1,0,0,0,35,Common Cold,1
+1,1,0,0,32,Common Cold,2
+1,1,1,0,29,Common Cold,2
+0,1,1,0,31,Common Cold,2
+1,0,1,0,27,Common Cold,1
+1,1,0,1,33,Common Cold,2
+0,1,0,1,26,Common Cold,1
+1,0,0,1,34,Common Cold,1
+1,1,1,1,36,Common Cold,2
+0,0,1,0,24,Common Cold,1
+1,1,0,0,38,Common Cold,2
+1,0,1,0,29,Common Cold,1
+0,1,1,1,32,Common Cold,2
+1,1,1,0,35,Common Cold,2
+0,1,0,0,28,Common Cold,1
+1,0,0,0,31,Common Cold,1
+1,1,0,1,37,Common Cold,2
+0,0,1,1,25,Common Cold,1
+1,1,1,0,40,Common Cold,2
+0,1,1,0,33,Common Cold,2
+1,0,1,0,30,Common Cold,1
+1,1,0,0,42,Common Cold,2
+0,1,0,1,29,Common Cold,1
+1,0,0,1,36,Common Cold,1
+1,1,1,1,44,Common Cold,2
+0,0,1,0,27,Common Cold,1
+1,1,1,1,45,Flu,3
+1,1,1,0,38,Flu,3
+1,0,1,1,42,Flu,3
+1,1,0,1,50,Flu,3
+0,1,1,1,33,Flu,2
+1,0,1,0,29,Flu,2
+1,1,1,1,48,Flu,3
+1,1,1,1,52,Flu,3
+1,1,0,1,41,Flu,2
+1,0,1,1,47,Flu,3
+1,1,1,1,55,Flu,3
+0,1,1,1,36,Flu,2
+1,1,1,0,44,Flu,3
+1,1,1,1,39,Flu,3
+1,0,1,1,46,Flu,2
+1,1,0,1,53,Flu,3
+1,1,1,1,58,Flu,3
+0,1,1,1,35,Flu,2
+1,1,1,0,49,Flu,3
+1,1,1,1,51,Flu,3
+1,0,1,1,43,Flu,2
+1,1,0,1,54,Flu,3
+1,1,1,1,60,Flu,3
+1,1,1,1,57,Flu,3
+1,0,1,1,40,Flu,2
+1,1,0,1,56,Flu,3
+1,1,1,1,62,Flu,3
+0,1,1,1,37,Flu,2
+1,1,1,0,63,Flu,3
+1,1,1,1,59,Flu,3
+1,1,1,1,61,Flu,3
+1,0,0,0,60,Covid,3
+1,0,0,1,55,Covid,3
+1,0,0,0,65,Covid,3
+1,0,0,1,70,Covid,3
+1,0,0,0,50,Covid,2
+1,0,0,1,58,Covid,3
+1,0,1,0,45,Covid,2
+1,0,1,1,52,Covid,3
+1,0,0,0,68,Covid,3
+1,0,0,1,62,Covid,3
+1,0,1,0,48,Covid,2
+1,0,1,1,64,Covid,3
+1,0,0,0,72,Covid,3
+1,0,0,1,66,Covid,3
+1,0,1,0,49,Covid,2
+1,0,1,1,67,Covid,3
+1,0,0,0,54,Covid,2
+1,0,0,1,69,Covid,3
+1,0,1,0,47,Covid,2
+1,0,1,1,71,Covid,3
+1,0,0,0,63,Covid,3
+1,0,0,1,73,Covid,3
+1,0,1,0,46,Covid,2
+1,0,1,1,74,Covid,3
+1,0,0,0,59,Covid,2
+1,0,0,1,75,Covid,3
+1,0,1,0,44,Covid,2
+1,0,1,1,76,Covid,3
+1,0,0,0,61,Covid,3
+1,0,0,1,77,Covid,3
+1,0,1,0,43,Covid,2
+1,0,1,1,78,Covid,3
+0,0,0,1,60,Migraine,2
+0,0,0,1,55,Migraine,2
+0,0,0,1,65,Migraine,3
+0,0,0,1,40,Migraine,1
+0,0,0,1,50,Migraine,2
+0,0,0,1,70,Migraine,3
+0,0,0,1,45,Migraine,2
+0,0,0,1,35,Migraine,1
+0,0,0,1,58,Migraine,2
+0,0,0,1,62,Migraine,3
+0,0,0,1,38,Migraine,1
+0,0,0,1,48,Migraine,2
+0,0,0,1,68,Migraine,3
+0,0,0,1,42,Migraine,1
+0,0,0,1,52,Migraine,2
+0,0,0,1,72,Migraine,3
+0,0,0,1,37,Migraine,1
+0,0,0,1,47,Migraine,2
+0,0,0,1,67,Migraine,3
+0,0,0,1,39,Migraine,1
+0,0,0,1,49,Migraine,2
+0,0,0,1,69,Migraine,3
+0,0,0,1,41,Migraine,1
+0,0,0,1,51,Migraine,2
+0,0,0,1,71,Migraine,3
+0,0,0,1,36,Migraine,1
+0,0,0,1,46,Migraine,2
+0,0,0,1,66,Migraine,3
+0,0,0,1,44,Migraine,1
+0,0,0,1,54,Migraine,2
+0,0,0,1,74,Migraine,3
+0,0,0,0,25,Healthy,0
+0,0,0,0,28,Healthy,0
+0,0,0,0,30,Healthy,0
+0,0,0,0,22,Healthy,0
+0,0,0,0,35,Healthy,0
+0,0,0,0,27,Healthy,0
+0,0,0,0,32,Healthy,0
+0,0,0,0,29,Healthy,0
+0,0,0,0,31,Healthy,0
+0,0,0,0,26,Healthy,0
+0,0,0,0,33,Healthy,0
+0,0,0,0,24,Healthy,0
+0,0,0,0,34,Healthy,0
+0,0,0,0,36,Healthy,0
+0,0,0,0,23,Healthy,0
+0,0,0,0,38,Healthy,0
+0,0,0,0,21,Healthy,0
+0,0,0,0,37,Healthy,0
+0,0,0,0,39,Healthy,0
+0,0,0,0,40,Healthy,0
+0,0,0,0,41,Healthy,0
+0,0,0,0,42,Healthy,0
+0,0,0,0,43,Healthy,0
+0,0,0,0,44,Healthy,0
+0,0,0,0,45,Healthy,0
+0,0,0,0,46,Healthy,0
+0,0,0,0,47,Healthy,0
+0,0,0,0,48,Healthy,0
+0,0,0,0,49,Healthy,0
+0,0,0,0,50,Healthy,0

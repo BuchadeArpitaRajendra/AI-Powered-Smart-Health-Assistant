@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your AI Diagnosis Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Your Health Assessment Results</h1>
+            <p>AI-powered analysis based on your symptoms</p>
+        </div>
+        
+        <div class="content">
+            <!-- Symptoms Summary -->
+            <div class="symptom-list">
+                <h3>📋 Your Reported Symptoms:</h3>
+                <ul>
+                    <li>🤒 Fever: {{ "✅ Yes" if fever == 1 else "❌ No" }}</li>
+                    <li>😤 Cough: {{ "✅ Yes" if cough == 1 else "❌ No" }}</li>
+                    <li>😴 Fatigue: {{ "✅ Yes" if fatigue == 1 else "❌ No" }}</li>
+                    <li>🤕 Headache: {{ "✅ Yes" if headache == 1 else "❌ No" }}</li>
+                    <li>📅 Age: {{ age }} years</li>
+                    <li>📊 Total Symptoms: {{ symptom_count }}</li>
+                </ul>
+            </div>
+            
+            <!-- AI Diagnosis -->
+            <div class="diagnosis-box">
+                <h2>🤖 AI Diagnosis</h2>
+                <h3>{{ disease }}</h3>
+                <div class="confidence-badge 
+                    {% if confidence >= 70 %}confidence-high
+                    {% elif confidence >= 50 %}confidence-medium
+                    {% else %}confidence-low
+                    {% endif %}">
+                    Confidence: {{ confidence }}%
+                </div>
+            </div>
+            
+            <!-- Explanation Section -->
+            <div class="info-box">
+                <h3>🔍 Why did the AI predict this?</h3>
+                <ul>
+                    {% for explanation in explanations %}
+                        <li>{{ explanation }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- Alternative Possibilities -->
+            <div class="info-box">
+                <h3>🔄 Alternative Possibilities</h3>
+                <ul>
+                    {% for alt in alternatives %}
+                        <li>{{ alt }}</li>
+                    {% endfor %}
+                </ul>
+                <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+                    💡 Note: These are alternative conditions with similar symptom patterns.
+                </p>
+            </div>
+            
+            <!-- Severity Score -->
+            <div class="score-card 
+                {% if severity_score <= 2 %}severity-mild
+                {% elif severity_score <= 5 %}severity-moderate
+                {% elif severity_score <= 8 %}severity-severe
+                {% else %}severity-critical
+                {% endif %}">
+                <div class="score-title">⚠️ Severity Score (Current Condition)</div>
+                <div class="score-value">{{ severity_score }} / 10</div>
+                <div class="score-description">{{ severity_description }}</div>
+            </div>
+            
+            <!-- Health Risk Score -->
+            <div class="score-card 
+                {% if health_risk <= 30 %}risk-low
+                {% elif health_risk <= 60 %}risk-moderate
+                {% elif health_risk <= 80 %}risk-high
+                {% else %}risk-very-high
+                {% endif %}">
+                <div class="score-title">📊 Health Risk Score (Long-term)</div>
+                <div class="score-value">{{ health_risk }} / 100</div>
+                <div class="score-description">{{ risk_description }}</div>
+            </div>
+            
+            <!-- Preventive Suggestions -->
+            <div class="info-box">
+                <h3>💡 Preventive Suggestions</h3>
+                <ul>
+                    {% for suggestion in suggestions %}
+                        <li>{{ suggestion }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+            <!-- Action Items -->
+            <div class="action-items">
+                <h3>📌 What you should do now:</h3>
+                <ul>
+                    {% if severity_score <= 2 %}
+                        <li>✅ Rest at home for 24-48 hours</li>
+                        <li>✅ Monitor your temperature</li>
+                        <li>✅ Call doctor only if symptoms worsen</li>
+                    {% elif severity_score <= 5 %}
+                        <li>⚠️ Rest and avoid strenuous activities</li>
+                        <li>⚠️ Consider teleconsultation with a doctor</li>
+                        <li>⚠️ Track symptoms for next 3 days</li>
+                    {% elif severity_score <= 8 %}
+                        <li>🩺 Schedule a doctor's appointment within 24 hours</li>
+                        <li>🩺 Avoid self-medication</li>
+                        <li>🩺 Get plenty of rest and fluids</li>
+                    {% else %}
+                        <li>🚨 GO TO THE NEAREST HOSPITAL IMMEDIATELY</li>
+                        <li>🚨 Do not drive yourself - get someone to take you</li>
+                        <li>🚨 Call emergency services if breathing difficulty</li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+            <!-- Disclaimer -->
+            <div class="disclaimer">
+                ⚠️ DISCLAIMER: This is an AI-powered demonstration tool for educational purposes. 
+                The information provided is not a substitute for professional medical advice, 
+                diagnosis, or treatment. Always seek the advice of your physician or other 
+                qualified health provider with any questions you may have regarding a medical condition.
+            </div>
+            
+            <a href="/" class="back-button">← Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

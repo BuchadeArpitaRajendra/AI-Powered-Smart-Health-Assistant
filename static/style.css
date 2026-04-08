@@ -1,0 +1,334 @@
+/* style.css - Professional styling for AI Health Assistant */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* Content Area */
+.content {
+    padding: 40px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.radio-group label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+input[type="number"] {
+    width: 200px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Button */
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
+
+/* Result Page Styles */
+.symptom-list {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.symptom-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.symptom-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 1.1em;
+}
+
+.symptom-list li:last-child {
+    border-bottom: none;
+}
+
+/* Diagnosis Box */
+.diagnosis-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.diagnosis-box h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.diagnosis-box h3 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+/* Score Cards */
+.score-card {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+
+.score-card:hover {
+    transform: translateY(-5px);
+}
+
+.severity-mild { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+.severity-moderate { background: linear-gradient(135deg, #ffe259 0%, #ffa751 100%); }
+.severity-severe { background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%); }
+.severity-critical { background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%); }
+
+.risk-low { background: linear-gradient(135deg, #a8e6cf 0%, #d4edda 100%); }
+.risk-moderate { background: linear-gradient(135deg, #ffd3b6 0%, #fff3cd 100%); }
+.risk-high { background: linear-gradient(135deg, #ffaaa5 0%, #ffe5d9 100%); }
+.risk-very-high { background: linear-gradient(135deg, #ff6b6b 0%, #f8d7da 100%); }
+
+.score-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.score-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.score-description {
+    font-size: 1em;
+}
+
+/* Info Boxes */
+.info-box {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 15px;
+    background: #f8f9fa;
+    border-left: 5px solid #667eea;
+}
+
+.info-box h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.info-box ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.info-box li {
+    margin: 8px 0;
+}
+
+/* Confidence Badge */
+.confidence-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.confidence-high {
+    background: #d4edda;
+    color: #155724;
+}
+
+.confidence-medium {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.confidence-low {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Action Items */
+.action-items {
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border-left: 5px solid #ff9800;
+}
+
+.action-items ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* Disclaimer */
+.disclaimer {
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* Back Button */
+.back-button {
+    display: inline-block;
+    background: #6c757d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.back-button:hover {
+    background: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        border-radius: 15px;
+    }
+    
+    .content {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.5em;
+    }
+    
+    .score-value {
+        font-size: 1.8em;
+    }
+}
+
+/* Loading Animation */
+.loading {
+    text-align: center;
+    padding: 40px;
+}
+
+.loading::after {
+    content: "🤖";
+    font-size: 3em;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
